@@ -28,7 +28,7 @@ int main() {
         result = fib(n);
     }
 
-    printf("Fibonacci Result (nth term): %d\n", result);
+    printf("Fibonacci Result (%dth term): %d\n", n, result);
     // Note: To print series, you loop this call.
     return 0;
 }
