@@ -17,17 +17,20 @@ int main() {
     int n = 200; // Input size
     double start, end;
 
+
     // 1. Serial Execution
     start = omp_get_wtime();
     for (int i = 1; i <= n; i++) {
-        if (is_prime(i)) { /* Logic */ }
+        if (is_prime(i)) { printf("%d ", i); }
     }
     end = omp_get_wtime();
     printf("Serial Time: %f Seconds\n", end - start);
 
+
+
     // 2. Parallel Execution
     start = omp_get_wtime();
-    #pragma omp parallel for
+    #pragma omp parallel for schedule(dynamic,4)
     for (int i = 1; i <= n; i++) {
         if (is_prime(i)) { printf("%d ", i); }
     }

@@ -1,7 +1,6 @@
 //Write an MPI program to demonstrate MPI_Send and MPI_Recv.
 
 
-
 #include <mpi.h>
 #include <stdio.h>
 
