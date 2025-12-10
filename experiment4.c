@@ -26,8 +26,6 @@ int main() {
     end = omp_get_wtime();
     printf("Serial Time: %f Seconds\n", end - start);
 
-
-
     // 2. Parallel Execution
     start = omp_get_wtime();
     #pragma omp parallel for schedule(dynamic,4)
